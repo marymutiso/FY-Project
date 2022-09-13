@@ -102,7 +102,7 @@ $sql = "SELECT jobID, workerFname, workerSname, jobDescription, jobDate, totalCo
 		echo "<td>".$res['jobDate']."</td>";
 		echo "<td>".$res['totalCost']."</td>";
 		echo "<td>".$res['clientJobStatus']."</td>";	
-		echo "<td><a href=\"../php/clientjobconfirmation.php?id=$res[jobID]\">Order Delivered</a> | <a href=\"../php/clientjobcancellation.php?id=$res[jobID]\" onClick=\"return confirm('Are you sure you want to cancel the and get a refund?')\">Cancel Order</a></td>";
+		echo "<td><a href=\"../php/clientjobconfirmation.php?id=$res[jobID]\">Confirm Bookng</a> | <a href=\"../php/clientjobcancellation.php?id=$res[jobID]\" onClick=\"return confirm('Are you sure you want to cancel the and get a refund?')\">Clear Booking</a></td>";
 		echo "</tr>";		
 	}
 	?>
