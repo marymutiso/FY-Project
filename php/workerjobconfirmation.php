@@ -59,7 +59,6 @@ echo $id = $_GET['id'];
                    header("location: ../html/workerpendingjobs.php");
                }
             }else{
-              echo "Error: " . $sql1 . "<br>" . $db->error;
               header("location: ../html/workerpendingjobs.php");
             } 
       }
