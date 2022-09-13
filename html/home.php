@@ -47,11 +47,11 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="../index.html">Grooming Parlor</a>
+			<a class="navbar-brand" href="../index.php">Grooming Parlor</a>
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav">
-				<li><a href="../index.html">Home</a></li>
+				<li><a href="../index.php">Home</a></li>
 				<li><a href="clientpendingjobs.php">Orders and Confirmations <span class="badge"><?php echo $row_cnt;?></span></a></li>
 				<li><a href="#">about Us</a></li>
 				<li><a href="#">Contact Us</a></li>
@@ -82,7 +82,7 @@
 				<div class="form-group col-xs-6">
                     <label for="workerSkills">Skills Category:</label>
                     <select id="workerSkills" class="form-control"  id ="workerSkills" name="workerSkills" required  autofocus title="Please enter your your skill category" onchange="pricefix();">
-                        <option value="Hair-dresser">Hair-dresser</option>
+                        <option value="hairdresser">Hair-dresser</option>
                         <option value="Facial">Facial</option>
                         <option value="Pedicure">Pedicure</option>
                         <option value="Blowdry">Blowdry</option>
@@ -160,7 +160,7 @@
 				/*wages.value= 10;
 				alert(wages.value);*/
 
-				 if (skills.value == "Hair-dresser") {
+				 if (skills.value == "hairdresser") {
 				 	var	durationValue = document.getElementById('duration').value;
 			    	var price = durationValue * 650;
 			        alert("Your total cost for the service will be ksh. " + price);

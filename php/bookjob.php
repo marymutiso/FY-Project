@@ -1,6 +1,6 @@
 <?php
 	include('../html/check.php');
-	//include('../html/connection.php');
+	include_once('../html/connection.php');
 
 
 	/*$date_now = new DateTime();
@@ -14,13 +14,12 @@
 			echo $jobDescription = trim($_POST["jobDescription"]);
 			echo $jobDate = trim($_POST["date"]);
 			echo $totalCost = trim($_POST["totalCost"]);
-echo  "1";
-		
+
+
 
 			$ses_sql = mysqli_query($db,"SELECT clientID, fName, sName, email, phone, county, constituency, latitude, longitude  FROM myclientinfo WHERE username='$curruser' ");
 
 			$row=mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
-echo  "1";
 			echo $clientID=$row['clientID'];
 			echo $clientFname=$row['fName'];
 			echo $clientSname=$row['sName'];
@@ -32,9 +31,10 @@ echo  "1";
 			echo $clientLocLongitude=$row['longitude'];
 
 			$sql = "SELECT workerID, fName, sName, username, email, phone FROM myworkersinfo WHERE workerSkills='$workerSkills' AND (county = '$county' OR constituency='$constituency') AND workerStatus = 'available' ORDER BY jobCount ASC LIMIT 1";
-echo  "1";
 			/*$sql = "SELECT workerID, fName, sName, email, phone FROM myworkersinfo WHERE workerSkills='Painter' AND (county = 'Nairobi' OR constituency='Parklands') ORDER BY jobCount ASC LIMIT 1";*/
-			
+
+
+
 			$result= mysqli_query($db,$sql);
 
 			/*if($result)
@@ -46,6 +46,7 @@ echo  "1";
 
 			$row= mysqli_fetch_assoc($result);
 			echo  "1";
+
 			
 			if(mysqli_num_rows($result) > 0)
 			{

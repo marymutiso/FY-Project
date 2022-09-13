@@ -131,7 +131,6 @@ input[type=submit]
 						</tr>
 					</table>
 					<br/>
-					<p align="center">Dont have an account? <a href="client registration.php">Sign up.</a></p>
 				</form>
 				</td>
 			</tr>

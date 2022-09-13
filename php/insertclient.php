@@ -4,7 +4,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "thefundis";
+$dbname = "db_salon";
 session_start();
 
 // Create connection

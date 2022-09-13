@@ -57,11 +57,11 @@ $sql = "SELECT jobID, workerFname, workerSname, jobDescription, jobDate, totalCo
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="../index.html">Grooming Parlor</a>
+			<a class="navbar-brand" href="../index.php">Grooming Parlor</a>
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav">
-				<li><a href="../index.html">Home</a></li>
+				<li><a href="../index.php">Home</a></li>
 				<li><a href="#">about Us</a></li>
 				<li><a href="#">Contact Us</a></li>
 			</ul>

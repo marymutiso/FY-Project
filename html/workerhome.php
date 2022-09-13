@@ -87,11 +87,11 @@ if ($result = mysqli_query($db, "SELECT * FROM tbljoborders WHERE (workerJobStat
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="../index.html">GROOMING PARLOR</a>
+			<a class="navbar-brand" href="../index.php">GROOMING PARLOR</a>
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav">
-				<li><a href="../index.html">Home</a></li>
+				<li><a href="../index.php">Home</a></li>
 				<li><a href="workerpendingjobs.php">Orders and Confirmations <span class="badge"><?php echo $row_cnt;?></span></a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
