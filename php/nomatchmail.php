@@ -1,7 +1,6 @@
 <?php
 include('bookjob.php');
 
-			echo $curruser = $_SESSION['username'];
 
 			$sql = "SELECT clientID,clientFname,clientSname,clientEmail,workerID,workerFname,workerSname,workerEmail,jobDescription,jobDate,totalCost,clientLocLatitude,clientLocLongitude,clientPhone,workerPhone FROM tbljoborders WHERE clientUsername = '$curruser' ORDER BY jobID DESC";
 
@@ -27,6 +26,8 @@ include('bookjob.php');
 			echo $clientPhone = $row['clientPhone'];
 			echo $workerPhone = $row['workerPhone']; 
 		}else{
-			header("location: ../html/home.php");
+
 		}
+
+header("location: ../html/home.php");
 ?>
