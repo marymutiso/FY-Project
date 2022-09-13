@@ -77,10 +77,10 @@
 		   		$sql = "UPDATE myworkersinfo SET jobCount = jobCount + 1, workerStatus='booked' where workerID = '$workerID'";
 		   		mysqli_query($db,$sql);
 
-		   		header("location: mailer.php");
+                header("location: ../html/clientpendingjobs.php");
 
 			}else{
-				header("location: nomatchmail.php");
+                header("location: ../html/clientpendingjobs.php");
 			}
 
 
