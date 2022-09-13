@@ -2,15 +2,23 @@
 include('connection.php');
 session_start();
 $user_check=$_SESSION['username'];
+$client_sql = mysqli_query($db,"SELECT username FROM myclientinfo WHERE username='$user_check' ");
 
-$ses_sql = mysqli_query($db,"SELECT username FROM myworkersinfo WHERE username='$user_check' ");
+$worker_sql = mysqli_query($db,"SELECT username FROM myworkersinfo WHERE username='$user_check' ");
 
-$row=mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
+if(mysqli_num_rows($client_sql) > 0){
+    $row = mysqli_fetch_array($client_sql);
 
-$login_user=$row['username'];
+    $login_user=$row['username'];
 
-if(!isset($user_check))
-{
-header("Location: workerindex.php");
+}else if (mysqli_num_rows($worker_sql) > 0){
+    $row = mysqli_fetch_array($worker_sql);
+
+    $login_user=$row['username'];
+}else{
+    if(!isset($user_check))
+    {
+        header("Location: index.php");
+    }
 }
 ?>
