@@ -52,19 +52,18 @@ echo $id = $_GET['id'];
                     echo $clientPhone = $row['clientPhone'];
                     echo $workerPhone = $row['workerPhone']; 
                   }else {
-                        echo "Error: " . $sql3 . "<br>" . $db->error;  
+                    header("location: ../html/clientpendingjobs.php");
                   }
 
                }else{
-                  echo "Error: " . $sql2 . "<br>" . $db->error;
+                   header("location: ../html/clientpendingjobs.php");
                }
             }else{
-              echo "Error: " . $sql1 . "<br>" . $db->error;
               header("location: ../html/clientpendingjobs.php");
             } 
       }
       else
       {
-        echo "Error: " . $sql . "<br>" . $db->error;
+          header("location: ../html/clientpendingjobs.php");
       }      
 ?>
