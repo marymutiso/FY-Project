@@ -58,6 +58,7 @@ echo $id = $_GET['id'];
                }else{
                    header("location: ../html/workerpendingjobs.php");
                }
+               header("location: ../html/workerpendingjobs.php");
             }else{
               header("location: ../html/workerpendingjobs.php");
             } 
